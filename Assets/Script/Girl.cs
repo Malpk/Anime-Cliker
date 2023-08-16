@@ -1,7 +1,7 @@
 using UnityEngine;
 
 public class Girl : MonoBehaviour
-{
+{ 
     [SerializeField] private int _money;
     [Header("Reference")]
     [SerializeField] private TextUI _clickText;
@@ -24,7 +24,7 @@ public class Girl : MonoBehaviour
             _moneyText?.SetText(_money, 8);
         } 
     }
-
+     
     private void OnValidate()
     {
         _curretMoney = _money;
@@ -34,7 +34,7 @@ public class Girl : MonoBehaviour
     private void OnMouseUp()
     {
         _curretMoney += curretClick;
-        _animator.SetTrigger("up");
+        _animator.SetTrigger("up"); 
     }
 
     public void AddClick()
