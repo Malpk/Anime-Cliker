@@ -28,11 +28,14 @@ public class GirlCell : MonoBehaviour
     public void ShowCell()
     {
         _girlCell.SetActive(true);
+        _target = _startPosition;
         _maskHolder.localPosition = _startPosition;
+        enabled = true;
     }
 
     public void HideCell()
     {
+        enabled = false;
         _girlCell.SetActive(false);
     }
 

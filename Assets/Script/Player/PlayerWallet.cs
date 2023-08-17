@@ -4,7 +4,6 @@ public class PlayerWallet : MonoBehaviour
 {
     [SerializeField] private int _playerMoney;
     [Header("Reference")]
-    [SerializeField] private TextUI _clickText;
     [SerializeField] private TextUI _moneyText;
 
     public int Money
@@ -42,7 +41,6 @@ public class PlayerWallet : MonoBehaviour
 
     public void TakeClickMoney(int money)
     {
-        _clickText?.SetText(money);
         TakeMoney(money);
     }
 }
