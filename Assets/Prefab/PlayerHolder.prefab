@@ -46,7 +46,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextState: {fileID: 6740618022006691109}
   _requredLove: 20
+  _delay: 3
+  _endWords: "\u0417\u0430\u0431\u0438\u0440\u0430\u0439 \u043C\u0435\u043D\u044F
+    \u0441\u043A\u043E\u0440\u0435\u0439!!!"
   _loveField: {fileID: 0}
+  _dialogWindow: {fileID: 0}
 --- !u!1 &1523570209369490169
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +316,7 @@ Transform:
   - {fileID: 8384647500286853762}
   - {fileID: 795476371868880665}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6410675292796470508
 MonoBehaviour:
@@ -328,8 +332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _click: 1
   _girl: {fileID: 558034823111023364}
+  _clickText: {fileID: 0}
   _animator: {fileID: 4105741819574037589}
   _wallet: {fileID: 5943778058977769377}
+  _girlSound: {fileID: 0}
 --- !u!114 &5943778058977769377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,7 +349,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerMoney: 100
-  _clickText: {fileID: 0}
   _moneyText: {fileID: 0}
 --- !u!114 &8852354022199833735
 MonoBehaviour:

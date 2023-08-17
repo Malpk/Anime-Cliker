@@ -35,7 +35,7 @@ public class GirlData : MonoBehaviour
         _cellHealth = 20;
     }
 
-    public string GetDialig()
+    public string GetDialog()
     {
         if (_dialogAcces.Count == 0)
         {
