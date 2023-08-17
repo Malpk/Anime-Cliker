@@ -8,6 +8,7 @@ public class LoveGirlState : GirlState
     [SerializeField] private int _delay = 1;
     [SerializeField] private string _endWords = "Забирай меня скорей!!!";
     [Header("Reference")]
+    [SerializeField] private TextUI _name;
     [SerializeField] private FieldUI _loveField;
     [SerializeField] private DialogWindow _dialogWindow;
 
@@ -26,6 +27,7 @@ public class LoveGirlState : GirlState
         _progress = 0;
         _delayProgress = _delay;
         _girl = girl.Data;
+        _name.SetText(_girl.GirlName);
         _requredLove = _girl.LoveHealth;
         _loveField.UpdateValue(_progress);
         _loveField.gameObject.SetActive(true);
@@ -35,16 +37,15 @@ public class LoveGirlState : GirlState
     {
         _progress = Mathf.Clamp(_progress + click, _progress, _requredLove);
         _loveField.UpdateValue(_progress / _requredLove);
-        if (_progress < _requredLove)
+        if (_progress < _requredLove - _delay)
         {
             UpdateDialog();
-            return true;
         }
         else
         {
             _dialogWindow.ShowDialog(_endWords);
-            return _progress > _requredLove + _delay;
         }
+        return _progress < _requredLove;
     }
 
     public override void Exit()
