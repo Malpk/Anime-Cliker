@@ -23,7 +23,7 @@ public class FieldUI : MonoBehaviour
     {
         _value = Mathf.Clamp01(value);
         _fieldImage.fillAmount = _value;
-        _progressLable.text = $"{(int)(_value * 100)}";
+        _progressLable?.SetText($"{(int)(_value * 100)}");
     }
 
 }

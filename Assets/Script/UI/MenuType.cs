@@ -4,5 +4,6 @@ public enum MenuType
     HUD,
     MainMenu,
     PauseMenu,
-    EndMenu
+    EndMenu,
+    PickMenu
 }
