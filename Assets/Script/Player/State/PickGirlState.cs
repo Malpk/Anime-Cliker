@@ -7,15 +7,17 @@ public class PickGirlState : GirlState
     [SerializeField] private InterfaceSwitcher _interface;
     [SerializeField] private ParticleSystem particleFinish;
     [SerializeField] private GameObject particleFinishObj;
-
+    private AudioManager audioManager;
     private GirlData _girl;
 
     public override GirlStateType TypeState => GirlStateType.PickState;
-
+    
     private void Start()
     {
+        audioManager = AudioManager.instanceAudio;
         particleFinishObj.gameObject.SetActive(true);  
         particleFinish.Stop();
+        
     }
 
     public override StateData Save()
@@ -36,6 +38,7 @@ public class PickGirlState : GirlState
         _interface.ShowMenu(MenuType.PickMenu);
         particleFinishObj.gameObject.SetActive(true);
         particleFinish.Play();
+        audioManager.PlayPicupVois();
     }
 
     public override bool UpdateState(int click)
