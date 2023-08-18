@@ -16,10 +16,26 @@ public class LoveGirlState : GirlState
     private float _progress;
     private GirlData _girl;
 
+    public override GirlStateType TypeState => GirlStateType.LoveState;
+
     private void Reset()
     {
         _delay = 3;
         _requredLove = 20;
+    }
+
+    public override StateData Save()
+    {
+        var data = new StateData();
+        data.State = TypeState;
+        data.Progress = _progress;
+        return data;
+    }
+
+    public override void Load(StateData data)
+    {
+        _progress = data.Progress;
+        _loveField.UpdateValue(_progress / _requredLove);
     }
 
     public override void Enter(Girl girl)
@@ -29,7 +45,7 @@ public class LoveGirlState : GirlState
         _girl = girl.Data;
         _name.SetText(_girl.GirlName);
         _requredLove = _girl.LoveHealth;
-        _loveField.UpdateValue(_progress);
+        _loveField.UpdateValue(_progress / _requredLove);
         _loveField.gameObject.SetActive(true);
     }
 
@@ -63,5 +79,6 @@ public class LoveGirlState : GirlState
             _dialogWindow.ShowDialog(_girl.GetDialog());
         }
     }
+
 
 }

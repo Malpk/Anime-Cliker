@@ -39,6 +39,12 @@ public class GirlCell : MonoBehaviour
         _girlCell.SetActive(false);
     }
 
+    public void LoadProgress(float progress)
+    {
+        _target = _startPosition + _maskOffset * progress;
+        _maskHolder.localPosition = _startPosition + _maskOffset * progress;
+    }
+
     public void UpdateProgress(float progress)
     {
         progress = Mathf.Clamp01(progress);

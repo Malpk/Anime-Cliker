@@ -6,18 +6,19 @@ public class ContentPanel : MonoBehaviour
     [SerializeField] private bool _isOpen;
     [SerializeField] private Color _openColor;
     [SerializeField] private Color _closeColor;
-    [SerializeField] private Sprite _sprite;
+    [SerializeField] private GirlData _girl;
     [Header("Reference")]
     [SerializeField] private Image _icon;
     [SerializeField] private TextUI _nameText;
 
+    public int PanelId => _girl.Id;
     public bool IsOpen => _isOpen;
-    public Sprite Sprite => _sprite;
+
 
     private void OnValidate()
     {
-        if(_icon)
-            _sprite = _icon.sprite;
+        if (_icon)
+            _icon.sprite = _girl.Sprite;
         _icon.color = _isOpen ? _openColor : _closeColor;
     }
 

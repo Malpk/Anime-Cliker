@@ -49,6 +49,7 @@ MonoBehaviour:
   _delay: 3
   _endWords: "\u0417\u0430\u0431\u0438\u0440\u0430\u0439 \u043C\u0435\u043D\u044F
     \u0441\u043A\u043E\u0440\u0435\u0439!!!"
+  _name: {fileID: 0}
   _loveField: {fileID: 0}
   _dialogWindow: {fileID: 0}
 --- !u!1 &1523570209369490169
@@ -76,8 +77,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1523570209369490169}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -12.3907, z: -89.97173}
-  m_LocalScale: {x: 12.548502, y: 14.40657, z: 5.4339}
+  m_LocalPosition: {x: 0, y: -12.61, z: 0}
+  m_LocalScale: {x: 12.548503, y: 14.40657, z: 5.4339}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3211505444937752857}
@@ -226,7 +227,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _nextState: {fileID: 141273156725002270}
+  _girlNameText: {fileID: 0}
   _interface: {fileID: 0}
+  _girlMenu: {fileID: 0}
 --- !u!1 &6989179593370120033
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +319,7 @@ Transform:
   - {fileID: 8384647500286853762}
   - {fileID: 795476371868880665}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6410675292796470508
 MonoBehaviour:
@@ -578,6 +581,10 @@ PrefabInstance:
     - target: {fileID: 9124134548186941193, guid: 1ef7cdf92a8a8e04ebba8426fc6f5c5f, type: 3}
       propertyPath: _maskOffset.y
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 9124134548186941193, guid: 1ef7cdf92a8a8e04ebba8426fc6f5c5f, type: 3}
+      propertyPath: _startPosition.y
+      value: -13.62
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6548384835523378681, guid: 1ef7cdf92a8a8e04ebba8426fc6f5c5f, type: 3}

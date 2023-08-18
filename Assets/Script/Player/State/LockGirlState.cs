@@ -8,9 +8,25 @@ public class LockGirlState : GirlState
 
     private float _progress;
 
+    public override GirlStateType TypeState => GirlStateType.LockState;
+
     private void Reset()
     {
         _cellHealth = 20;
+    }
+
+    public override StateData Save()
+    {
+        var data = new StateData();
+        data.State = TypeState;
+        data.Progress = _progress;
+        return data;
+    }
+
+    public override void Load(StateData data)
+    {
+        _progress = data.Progress;
+        _girlCell.LoadProgress(_progress / _cellHealth);
     }
 
     public override void Enter(Girl girl)
@@ -29,6 +45,8 @@ public class LockGirlState : GirlState
 
     public override void Exit()
     {
+        _girlCell.LoadProgress(1);
         _girlCell.HideCell();
     }
+
 }
