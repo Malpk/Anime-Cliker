@@ -9,17 +9,36 @@ public class Girl : MonoBehaviour
 
     public GirlData Data => _data;
 
+
     private void Awake()
     {
         foreach (var state in _states)
         {
             state.Exit();
         }
+        SetGirl(_data);
     }
 
-    private void Start()
+    public string Save()
     {
-        SetGirl(_data);
+        return JsonUtility.ToJson(_curretState.Save());
+    }
+
+    public void Load(string json)
+    {
+        if (json != "")
+        {
+            var data = JsonUtility.FromJson<StateData>(json);
+            foreach (var state in _states)
+            {
+                if (state.TypeState == data.State)
+                {
+                    SetState(state);
+                    state.Load(data);
+                    return;
+                }
+            }
+        }
     }
 
     public void SetGirl(GirlData data)

@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GirlData : MonoBehaviour
 {
+    [SerializeField] private int _id;
     [Min(10)]
     [SerializeField] private int _loveHealth;
     [Min(10)]
@@ -16,6 +17,7 @@ public class GirlData : MonoBehaviour
 
     private List<string> _dialogAcces = new List<string>();
 
+    public int Id => _id;
     public int CellHealth => _cellHealth;
     public int LoveHealth => _loveHealth;
     public string GirlName => _girlName;

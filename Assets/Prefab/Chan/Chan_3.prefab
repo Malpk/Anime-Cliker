@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c30390cb894b484487da163acfe4e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _id: 2
   _loveHealth: 25
   _cellHealth: 25
   _girlName: "\u042E\u0438 "

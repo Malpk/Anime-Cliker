@@ -7,11 +7,6 @@ public class InterfaceSwitcher : MonoBehaviour
 
     private UIMenu _openMenu;
 
-    private void Start()
-    {
-        ShowMenu(_startMenu);
-    }
-
     public void ShowMenu(MenuType type)
     {
         if (_openMenu)
