@@ -4,10 +4,14 @@ public class PickGirlState : GirlState
 {
     [SerializeField] private TextUI _girlNameText;
     [SerializeField] private InterfaceSwitcher _interface;
+    [SerializeField] private GirlCollectionMenu _girlMenu;
+
+    private GirlData _girl;
 
     public override void Enter(Girl girl)
     {
-        _girlNameText.SetText(girl.Data.GirlName);
+        _girl = girl.Data;
+        _girlNameText.SetText(_girl.GirlName);
         _interface.ShowMenu(MenuType.PickMenu);
     }
 
@@ -18,6 +22,7 @@ public class PickGirlState : GirlState
 
     public override void Exit()
     {
+        _girlMenu.Open(_girl);
         _interface.ShowMenu(MenuType.HUD);
     }
 

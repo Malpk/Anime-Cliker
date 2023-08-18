@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class UIController : MonoBehaviour
 {
+    [SerializeField] private Player _player;
     [SerializeField] private InterfaceSwitcher _intefaceHolder;
 
     private UIMenu _openMenu;
@@ -22,6 +23,7 @@ public class UIController : MonoBehaviour
     public void OpenMenu(UIMenu menu)
     {
         enabled = true;
+        _player.SetBolock(true);
         if ( _openMenu)
         {
             _openMenu.ShowSubMenu(menu);
@@ -39,6 +41,7 @@ public class UIController : MonoBehaviour
         {
             enabled = false;
             _openMenu = null;
+            _player.SetBolock(false);
         }
     }
 }

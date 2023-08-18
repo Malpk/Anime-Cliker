@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GirlPanel : MonoBehaviour
+public class ContentPanel : MonoBehaviour
 {
     [SerializeField] private bool _isOpen;
     [SerializeField] private Color _openColor;
