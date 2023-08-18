@@ -1,4 +1,6 @@
+using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AudioManager : MonoBehaviour
@@ -7,16 +9,20 @@ public class AudioManager : MonoBehaviour
     
     [Min(0)]
     [SerializeField] private int _delay;
-    [SerializeField] private List<AudioClip> _clips;
+
+    [SerializeField] private List<AudioClip> _clipsGirle;
+    [SerializeField] private List<AudioClip> _clipsMan; 
+
     [SerializeField] private AudioClip ironLock;
-    
+
+    [SerializeField] private float volume = 1; 
+
     private int _index = 0;
     private float _progress = 0;
-    private AudioSource audioSource;
-
+    private AudioSource audioSource; 
     private void Reset()
     {
-        _delay = 3;
+        _delay = 9;
     }
 
     private void Awake()
@@ -32,11 +38,17 @@ public class AudioManager : MonoBehaviour
             return;
         }
         _progress = _delay;
-        audioSource = GetComponent<AudioSource>();
+        audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.volume = volume; 
     }
     public void PlayLockIron()
     {
         audioSource.PlayOneShot(ironLock,1f);
+    }
+    public void PlayVoisMan()
+    { 
+        int index = Random.Range(0, 2);
+        audioSource.PlayOneShot(_clipsMan[index]);
     }
     public void PlayVois()
     {
@@ -45,12 +57,12 @@ public class AudioManager : MonoBehaviour
         {
             _progress = 0f;
             int index = GetRandomVois();
-            audioSource.PlayOneShot(_clips[index]);
+            audioSource.PlayOneShot(_clipsGirle[index]);
         }
     }
     private int GetRandomVois()
-    {
-        _index = Random.Range(0, _clips.Count);
+    {   
+        _index = Random.Range(0, _clipsGirle.Count);
         return _index;
     }
 }

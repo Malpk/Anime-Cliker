@@ -6,12 +6,14 @@ public class SwichMusic : MonoBehaviour
 {
     private AudioSource m_AudioSource;
     [SerializeField] private AudioClip[] audioArray;
+    [SerializeField] private float volume = 1;
     private int index = 0;
     private bool isPlaying = false;
 
     private void Awake()
-    {
-        m_AudioSource = GetComponent<AudioSource>();
+    { 
+        m_AudioSource = gameObject.AddComponent<AudioSource>();
+        m_AudioSource.volume = volume;
     }
 
     private IEnumerator Start()
