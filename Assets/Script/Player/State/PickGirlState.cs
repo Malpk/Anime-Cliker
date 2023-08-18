@@ -31,7 +31,8 @@ public class PickGirlState : GirlState
 
     public override void Enter(Girl girl)
     {
-        _girlNameText.SetText(girl.Data.GirlName);
+        _girl = girl.Data;
+        _girlNameText.SetText(_girl.GirlName);
         _interface.ShowMenu(MenuType.PickMenu);
         particleFinishObj.gameObject.SetActive(true);
         particleFinish.Play();
