@@ -5,14 +5,19 @@ using UnityEngine;
 public class FocusSoundController : MonoBehaviour
 {
     private bool IsPlayingReclam = true;
+
+#if !UNITY_EDITOR
     private void OnApplicationFocus(bool hasFocus) //metod unity
     {
         Silence(!hasFocus);
     }
+
     private void OnApplicationPause(bool isPaused) //metod unity
     {
         Silence(isPaused);
     }
+#endif
+
     private void Silence(bool silence)
     {
         AudioListener.pause = silence;

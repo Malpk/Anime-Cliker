@@ -10,9 +10,42 @@ public class GirlSwitcher : MonoBehaviour
 
     private List<GirlData> _girlAcces = new List<GirlData>();
 
-    private void Start()
+    private void Awake()
     {
         Restart();
+    }
+
+    public void Load(string json)
+    {
+        if (json != "")
+        {
+            var data = JsonUtility.FromJson<ProgressData>(json);
+            _girlAcces.Clear();
+            foreach (var girl in _girs)
+            {
+                if (data.LockGirl.Contains(girl.Id))
+                {
+                    _girlAcces.Add(girl);
+                }
+                else if (girl.Id == data.GirlActive)
+                {
+                    _girl.SetGirl(girl);
+                    _girl.Load(data.GirlProgress);
+                }
+            }
+        }
+    }
+
+    public string Save()
+    {
+        var data = new ProgressData();
+        data.GirlActive = _girl.Data.Id;
+        data.GirlProgress = _girl.Save();
+        foreach (var girl in _girlAcces)
+        {
+            data.LockGirl.Add(girl.Id);
+        }
+        return JsonUtility.ToJson(data);
     }
 
     public void NextGirl()

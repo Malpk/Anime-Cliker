@@ -216,8 +216,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _loveHealth: 25
   _cellHealth: 25
-  _girlName: 
-  _dialogs: []
+  _girlName: "\u041C\u0435\u0433\u0443\u043C\u0438 "
+  _dialogs:
+  - "\u0410\u0445"
+  - "\u041E\u0445"
+  - "\u041D\u044F\u044F\u044F\u044F"
   _sprite: {fileID: 21300000, guid: f66a9406c46050149a017d76b95afc1b, type: 3}
   _body: {fileID: 5475900765926433477}
   _shadow: {fileID: 3788608085697196445}
