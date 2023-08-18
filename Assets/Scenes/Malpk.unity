@@ -782,6 +782,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 98057606}
     m_Modifications:
+    - target: {fileID: 1424263150734255370, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
+    - target: {fileID: 1424263150734255370, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3056673111586128222, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1766,7 +1774,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0420\u0435\u0441\u0442\u0430\u0440\u0442"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1830,7 +1838,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1010630728
@@ -2857,7 +2865,7 @@ GameObject:
   - component: {fileID: 1384394463}
   - component: {fileID: 1384394462}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Name(TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2905,8 +2913,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
+  m_sharedMaterial: {fileID: 1474441472966386374, guid: bdf417ff203d1884a966e340c0974850, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2933,7 +2941,7 @@ MonoBehaviour:
   m_fontSize: 50
   m_fontSizeBase: 50
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -4068,7 +4076,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u041F\u043E\u0434\u043E\u0431\u0440\u0430\u0442\u044C"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4076,7 +4084,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_fontColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4116,7 +4124,7 @@ MonoBehaviour:
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
   m_enableExtraPadding: 0
-  checkPaddingRequired: 0
+  checkPaddingRequired: 1
   m_isRichText: 1
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
@@ -4132,7 +4140,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1707645450
@@ -4162,6 +4170,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 98057606}
     m_Modifications:
+    - target: {fileID: 1424263150734255370, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
+    - target: {fileID: 1424263150734255370, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3056673111586128222, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4360,7 +4376,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u0421\u0430\u043A\u0443\u0440\u0430"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -4388,7 +4404,7 @@ MonoBehaviour:
   m_fontSize: 98.14
   m_fontSizeBase: 98.14
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
@@ -4424,7 +4440,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
+  m_hasFontAssetChanged: 1
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1755932238
@@ -5075,6 +5091,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 98057606}
     m_Modifications:
+    - target: {fileID: 1424263150734255370, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
+    - target: {fileID: 1424263150734255370, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3056673111586128222, guid: 68f5d81b384f2ca4692bc95bea1f4cc5, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -5369,6 +5393,38 @@ PrefabInstance:
       propertyPath: m_text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: bdf417ff203d1884a966e340c0974850, type: 2}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1474441472966386374, guid: bdf417ff203d1884a966e340c0974850, type: 2}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6006109636163967739, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6203346631346507333, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
       propertyPath: _text
       value: 
@@ -5377,6 +5433,10 @@ PrefabInstance:
       propertyPath: _text
       value: 
       objectReference: {fileID: 2741147236238493902}
+    - target: {fileID: 9163224134871651612, guid: 27160b18da2b5e7458ac62293359b1ca, type: 3}
+      propertyPath: m_Name
+      value: Dialog (TMP)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
