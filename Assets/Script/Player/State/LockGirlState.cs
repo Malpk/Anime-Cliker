@@ -33,6 +33,7 @@ public class LockGirlState : GirlState
     {
         _progress = 0f;
         _girlCell.ShowCell();
+        _girlCell.LoadProgress(_progress);
         _cellHealth = girl.Data.CellHealth;
     }
 
@@ -45,8 +46,8 @@ public class LockGirlState : GirlState
 
     public override void Exit()
     {
-        _girlCell.LoadProgress(1);
         _girlCell.HideCell();
+        _girlCell.LoadProgress(1f);
     }
 
 }

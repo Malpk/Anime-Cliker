@@ -22,7 +22,6 @@ public class DataSaver : MonoBehaviour
         var data = new PlayerData();
         data.ProgressData = _girlSwitcher.Save();
         data.OpenGirlMenu = _collectionGirl.Save();
-        Debug.Log(JsonUtility.ToJson(data));
         PlayerPrefs.SetString(_key ,JsonUtility.ToJson(data));
     }
 

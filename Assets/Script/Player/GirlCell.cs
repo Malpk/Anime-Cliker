@@ -5,18 +5,18 @@ public class GirlCell : MonoBehaviour
     [Range(0, 1f)]
     [SerializeField] private float _smoothTime;
     [SerializeField] private Vector2 _maskOffset;
+    [SerializeField] private Vector2 _startMaskPosition;
     [Header("Reference")]
     [SerializeField] private Transform _maskHolder; 
     [SerializeField] private GameObject _girlCell;
 
     private Vector2 _target;
     private Vector2 _velocity;
-    private Vector2 _startPosition;
+
 
     private void Awake()
     {
-        _startPosition = _maskHolder.localPosition;
-        _target = _startPosition;
+        _target = _startMaskPosition;
     }
 
     private void Update()
@@ -28,8 +28,8 @@ public class GirlCell : MonoBehaviour
     public void ShowCell()
     {
         _girlCell.SetActive(true);
-        _target = _startPosition;
-        _maskHolder.localPosition = _startPosition;
+        _target = _startMaskPosition;
+        _maskHolder.localPosition = _startMaskPosition;
         enabled = true;
     }
 
@@ -41,13 +41,13 @@ public class GirlCell : MonoBehaviour
 
     public void LoadProgress(float progress)
     {
-        _target = _startPosition + _maskOffset * progress;
-        _maskHolder.localPosition = _startPosition + _maskOffset * progress;
+        _target = _startMaskPosition + _maskOffset * progress;
+        _maskHolder.localPosition = _startMaskPosition + _maskOffset * progress;
     }
 
     public void UpdateProgress(float progress)
     {
         progress = Mathf.Clamp01(progress);
-        _target = _startPosition + _maskOffset * progress;
+        _target = _startMaskPosition + _maskOffset * progress;
     }
 }
