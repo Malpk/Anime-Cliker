@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private List<AudioClip> _clipsMan; 
 
     [SerializeField] private AudioClip ironLock;
+    [SerializeField] private AudioClip clipPicup;
 
     [SerializeField] private float volume = 1; 
 
@@ -43,7 +44,11 @@ public class AudioManager : MonoBehaviour
     }
     public void PlayLockIron()
     {
-        audioSource.PlayOneShot(ironLock,1f);
+        audioSource.PlayOneShot(ironLock,1f); 
+    }
+    public void PlayPicupVois()
+    {
+        audioSource.PlayOneShot(clipPicup, 1f);
     }
     public void PlayVoisMan()
     { 

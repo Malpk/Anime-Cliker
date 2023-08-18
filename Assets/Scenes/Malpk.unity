@@ -2531,7 +2531,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466218337681942742, guid: 35b021d30e913084290174909febb7e9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0045154
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 1466218337681942742, guid: 35b021d30e913084290174909febb7e9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2597,6 +2597,10 @@ PrefabInstance:
       propertyPath: ironLock
       value: 
       objectReference: {fileID: 8300000, guid: 67deb0e7bf0b94a42b9c4204ea7507dc, type: 3}
+    - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
+      propertyPath: clipPicup
+      value: 
+      objectReference: {fileID: 8300000, guid: 34241cec8ffe50f4fb8699337af424f7, type: 3}
     - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
       propertyPath: _clips.Array.size
       value: 14
