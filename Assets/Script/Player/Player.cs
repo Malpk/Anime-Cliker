@@ -8,22 +8,17 @@ public class Player : MonoBehaviour
     [SerializeField] private TextUI _clickText;
     [SerializeField] private Animator _animator;
     [SerializeField] private PlayerWallet _wallet;
-    [SerializeField] private AudioManager _girlSound;
+    
 
     private int _boost = 1;
-    private bool _isBlock;
 
     public int CurretClick => _boost * _click;
 
     private void OnMouseUp()
     {
-        if (!_isBlock)
-        {
-            _animator.SetTrigger("up");
-            _girl.UpdateGirl(CurretClick);
-            _wallet.TakeClickMoney(CurretClick);
-            _girlSound.PlayVois();
-        }
+        _animator.SetTrigger("up");
+        _girl.UpdateGirl(CurretClick);
+        _wallet.TakeClickMoney(CurretClick); 
     }
 
     public void AddClick()
@@ -38,8 +33,4 @@ public class Player : MonoBehaviour
         _clickText.SetText(CurretClick);
     }
 
-    public void SetBolock(bool block)
-    {
-        _isBlock = block;
-    }
 }
