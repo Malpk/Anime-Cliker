@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     [Min(0)]
     [SerializeField] private int _delay;
     [SerializeField] private List<AudioClip> _clips;
+    [SerializeField] private AudioClip ironLock;
     
     private int _index = 0;
     private float _progress = 0;
@@ -32,6 +33,10 @@ public class AudioManager : MonoBehaviour
         }
         _progress = _delay;
         audioSource = GetComponent<AudioSource>();
+    }
+    public void PlayLockIron()
+    {
+        audioSource.PlayOneShot(ironLock,1f);
     }
     public void PlayVois()
     {

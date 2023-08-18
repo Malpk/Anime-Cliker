@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class LoveGirlState : GirlState
 {
+    private AudioManager _girlSound;
     [Min(10)]
     [SerializeField] private int _requredLove;
     [Min(1)]
@@ -11,11 +12,19 @@ public class LoveGirlState : GirlState
     [SerializeField] private TextUI _name;
     [SerializeField] private FieldUI _loveField;
     [SerializeField] private DialogWindow _dialogWindow;
+    [SerializeField] private ParticleSystem particleLove;
+    [SerializeField] private GameObject particleLoveObj;
+   
 
     private int _delayProgress;
     private float _progress;
     private GirlData _girl;
-
+    public void Start()
+    {
+        particleLoveObj.gameObject.SetActive(true);
+        particleLove.Stop();
+        _girlSound = AudioManager.instanceAudio;
+    }
     private void Reset()
     {
         _delay = 3;
@@ -31,12 +40,15 @@ public class LoveGirlState : GirlState
         _requredLove = _girl.LoveHealth;
         _loveField.UpdateValue(_progress);
         _loveField.gameObject.SetActive(true);
+        particleLoveObj.gameObject.SetActive(true);
     }
 
     public override bool UpdateState(int click)
     {
         _progress = Mathf.Clamp(_progress + click, _progress, _requredLove);
-        _loveField.UpdateValue(_progress / _requredLove);
+        _loveField.UpdateValue(_progress / _requredLove); 
+        particleLove.Play();
+        _girlSound.PlayVois();
         if (_progress < _requredLove - _delay)
         {
             UpdateDialog();
@@ -52,6 +64,7 @@ public class LoveGirlState : GirlState
     {
         _loveField.gameObject.SetActive(false);
         _dialogWindow.HideDialog();
+        particleLoveObj.gameObject.SetActive(false);
     }
 
     private void UpdateDialog()

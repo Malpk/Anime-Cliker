@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     [SerializeField] private TextUI _clickText;
     [SerializeField] private Animator _animator;
     [SerializeField] private PlayerWallet _wallet;
-    [SerializeField] private AudioManager _girlSound;
+    
 
     private int _boost = 1;
 
@@ -18,8 +18,7 @@ public class Player : MonoBehaviour
     {
         _animator.SetTrigger("up");
         _girl.UpdateGirl(CurretClick);
-        _wallet.TakeClickMoney(CurretClick);
-        _girlSound.PlayVois();
+        _wallet.TakeClickMoney(CurretClick); 
     }
 
     public void AddClick()
