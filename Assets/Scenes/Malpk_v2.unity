@@ -490,7 +490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0e9f885ec773a44bf59fce699011ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _key: 5
+  _key: 111
   _girlSwitcher: {fileID: 8101313108694774261}
   _collectionGirl: {fileID: 1680960308}
 --- !u!4 &367452333
@@ -3603,6 +3603,10 @@ PrefabInstance:
       propertyPath: _girlNameText
       value: 
       objectReference: {fileID: 2035478660}
+    - target: {fileID: 6740618022006691109, guid: cc363e25be15a60448404ac1431d1938, type: 3}
+      propertyPath: _girlCollectionMenu
+      value: 
+      objectReference: {fileID: 1680960308}
     - target: {fileID: 8769815266034046551, guid: cc363e25be15a60448404ac1431d1938, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.22

@@ -15,10 +15,12 @@ public class LoveGirlState : GirlState
     [SerializeField] private ParticleSystem particleLove;
     [SerializeField] private GameObject particleLoveObj;
    
-
     private int _delayProgress;
     private float _progress;
     private GirlData _girl;
+
+    public override GirlStateType TypeState => GirlStateType.LoveState;
+
     public void Start()
     {
         particleLoveObj.gameObject.SetActive(true);
@@ -29,6 +31,21 @@ public class LoveGirlState : GirlState
     {
         _delay = 3;
         _requredLove = 20;
+    }
+
+
+    public override StateData Save()
+    {
+        var data = new StateData();
+        data.State = TypeState;
+        data.Progress = _progress;
+        return data;
+    }
+
+    public override void Load(StateData data)
+    {
+        _progress = data.Progress;
+        _loveField.UpdateValue(_progress / _requredLove);
     }
 
     public override void Enter(Girl girl)

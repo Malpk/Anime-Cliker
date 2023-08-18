@@ -29,6 +29,7 @@ public class DataSaver : MonoBehaviour
     {
         if (PlayerPrefs.HasKey(_key))
         {
+            Debug.Log(PlayerPrefs.GetString(_key));
             var data = JsonUtility.FromJson<PlayerData>(
                 PlayerPrefs.GetString(_key));
             _girlSwitcher.Load(data.ProgressData);
