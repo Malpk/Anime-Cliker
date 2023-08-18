@@ -3187,7 +3187,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19, y: -519}
+  m_AnchoredPosition: {x: 19, y: -449}
   m_SizeDelta: {x: 600, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1432568470
@@ -3539,7 +3539,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1615795604
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4032,7 +4032,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!222 &1755932238
@@ -5393,6 +5393,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 141273156725002270, guid: cc363e25be15a60448404ac1431d1938, type: 3}
+      propertyPath: _girlSound
+      value: 
+      objectReference: {fileID: 948920975}
     - target: {fileID: 558034823111023364, guid: cc363e25be15a60448404ac1431d1938, type: 3}
       propertyPath: _states.Array.size
       value: 3
@@ -5458,6 +5462,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1630051605}
     - target: {fileID: 6091610856538989303, guid: cc363e25be15a60448404ac1431d1938, type: 3}
+      propertyPath: _manager
+      value: 
+      objectReference: {fileID: 948920975}
+    - target: {fileID: 6091610856538989303, guid: cc363e25be15a60448404ac1431d1938, type: 3}
+      propertyPath: _girlSound
+      value: 
+      objectReference: {fileID: 948920975}
+    - target: {fileID: 6091610856538989303, guid: cc363e25be15a60448404ac1431d1938, type: 3}
       propertyPath: _loveField
       value: 
       objectReference: {fileID: 1630051604}
@@ -5481,6 +5493,10 @@ PrefabInstance:
       propertyPath: _interface
       value: 
       objectReference: {fileID: 2106599950}
+    - target: {fileID: 6740618022006691109, guid: cc363e25be15a60448404ac1431d1938, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 948920975}
     - target: {fileID: 6740618022006691109, guid: cc363e25be15a60448404ac1431d1938, type: 3}
       propertyPath: _girlNameText
       value: 

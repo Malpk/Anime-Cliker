@@ -3,11 +3,12 @@ using UnityEngine;
 public class PickGirlState : GirlState
 {
     [SerializeField] private TextUI _girlNameText;
-    [SerializeField] private GirlCollectionMenu _girlCollectionMenu;
-    [SerializeField] private InterfaceSwitcher _interface;
-    [SerializeField] private ParticleSystem particleFinish;
     [SerializeField] private GameObject particleFinishObj;
-    private AudioManager audioManager;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private ParticleSystem particleFinish;
+    [SerializeField] private InterfaceSwitcher _interface;
+    [SerializeField] private GirlCollectionMenu _girlCollectionMenu;
+
     private GirlData _girl;
 
     public override GirlStateType TypeState => GirlStateType.PickState;
