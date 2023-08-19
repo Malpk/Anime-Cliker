@@ -13,8 +13,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private int _delay;
 
     [SerializeField] private List<AudioClip> _clipsGirle;
-    [SerializeField] private List<AudioClip> _clipsMan; 
-
+    [SerializeField] private List<AudioClip> _clipsMan;
+    [SerializeField] private AudioClip _click;
     [SerializeField] private AudioClip ironLock;
     [SerializeField] private AudioClip clipPicup;
 
@@ -69,6 +69,10 @@ public class AudioManager : MonoBehaviour
             _progress = 0f;
             int index = GetRandomVois();
             audioSource.PlayOneShot(_clipsGirle[index]);
+        }
+        else
+        {
+            audioSource.PlayOneShot(_click);
         }
     }
     private int GetRandomVois()

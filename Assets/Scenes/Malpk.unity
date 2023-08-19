@@ -2109,11 +2109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e1f18e1cec7a1f4090989cba1f4751a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &948920976 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 3612482364090975349, guid: 35b021d30e913084290174909febb7e9, type: 3}
-  m_PrefabInstance: {fileID: 1291103386}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &948920978 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5405354421120434895, guid: 35b021d30e913084290174909febb7e9, type: 3}
@@ -2761,22 +2756,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3612482364090975349, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: m_Volume
-      value: 0.127
-      objectReference: {fileID: 0}
-    - target: {fileID: 5405354421120434895, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5405354421120434895, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: _volumeMus
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5405354421120434895, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: m_AudioSource
-      value: 
-      objectReference: {fileID: 948920976}
     - target: {fileID: 5405354421120434895, guid: 35b021d30e913084290174909febb7e9, type: 3}
       propertyPath: musicVolumeSlider
       value: 
@@ -2784,26 +2763,6 @@ PrefabInstance:
     - target: {fileID: 7212180544582442843, guid: 35b021d30e913084290174909febb7e9, type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: _delay
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: volume
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: _volume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: clipPicup
-      value: 
-      objectReference: {fileID: 8300000, guid: 34241cec8ffe50f4fb8699337af424f7, type: 3}
-    - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
-      propertyPath: audioSource
-      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 7970393789067397462, guid: 35b021d30e913084290174909febb7e9, type: 3}
       propertyPath: voicesVolumeSlider
