@@ -14,6 +14,14 @@ public class Player : MonoBehaviour
 
     public int CurretClick => _boost * _click;
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            OnMouseUp();
+        }
+    }
+
     private void OnMouseUp()
     {
         if (!_isBlock)
