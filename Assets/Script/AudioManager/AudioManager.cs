@@ -16,11 +16,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip ironLock;
     [SerializeField] private AudioClip clipPicup;
 
-    [SerializeField] private float volume = 1; 
+     private float volumeIsMusic = 1f; 
 
     private int _index = 0;
     private float _progress = 0;
-    private AudioSource audioSource; 
+    [SerializeField] private AudioSource audioSource; 
     private void Reset()
     {
         _delay = 9;
@@ -38,9 +38,11 @@ public class AudioManager : MonoBehaviour
             Destroy(this);
             return;
         }
-        _progress = _delay;
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.volume = volume; 
+        _progress = _delay; 
+    } 
+    private void Update()
+    {
+        audioSource.volume = volumeIsMusic;
     }
     public void PlayLockIron()
     {
@@ -69,6 +71,10 @@ public class AudioManager : MonoBehaviour
     {   
         _index = Random.Range(0, _clipsGirle.Count);
         return _index;
+    }
+    public void SetVolumeMusic(float volume)
+    {
+        volumeIsMusic = volume;
     }
 }
  
