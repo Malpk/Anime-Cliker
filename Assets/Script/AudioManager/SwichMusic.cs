@@ -4,24 +4,22 @@ using UnityEngine;
 
 public class SwichMusic : MonoBehaviour
 {
-    private AudioSource m_AudioSource;
+    [SerializeField] private AudioSource m_AudioSource;
     [SerializeField] private AudioClip[] audioArray;
-    [SerializeField] private float volume = 1;
+    private float volumeIsMusic = 1;
     private int index = 0;
     private bool isPlaying = false;
-
-    private void Awake()
-    { 
-        m_AudioSource = gameObject.AddComponent<AudioSource>();
-        m_AudioSource.volume = volume;
-    }
+     
 
     private IEnumerator Start()
-    {
+    { 
         PlayNextMusic();
         yield return null;
     }
-
+    private void Update()
+    {
+        m_AudioSource.volume = volumeIsMusic;
+    }
     private void PlayNextMusic()
     {
         m_AudioSource.clip = audioArray[index];
@@ -56,5 +54,9 @@ public class SwichMusic : MonoBehaviour
         m_AudioSource.Stop();
         StopAllCoroutines();
         isPlaying = false;
+    }
+    public void SetVolumeMusic(float volume)
+    {
+        volumeIsMusic = volume;
     }
 }

@@ -15,7 +15,6 @@ public class PickGirlState : GirlState
     
     private void Start()
     {
-        audioManager = AudioManager.instanceAudio;
         particleFinishObj.gameObject.SetActive(true);  
         particleFinish.Stop();
         
