@@ -85,6 +85,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6143871062725996488}
+  - component: {fileID: 4979753721674572528}
   - component: {fileID: 3674217404931944958}
   - component: {fileID: 1424263150734255370}
   m_Layer: 5
@@ -114,6 +115,22 @@ RectTransform:
   m_AnchoredPosition: {x: -0.000026703, y: -48.339996}
   m_SizeDelta: {x: 536.44, y: 97.11}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &4979753721674572528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965396631764311325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 774277ea1d9e3814eb8ba5583cdac1c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _text: "\u041C\u0435\u0433\u0443\u043C\u0438 "
+  _prefix: 
+  _postfix: 
+  _mesh: {fileID: 1424263150734255370}
 --- !u!222 &3674217404931944958
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -142,7 +159,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u044F \u044F "
+  m_text: "\u041C\u0435\u0433\u0443\u043C\u0438 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -221,9 +238,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6588421426017156677}
   - component: {fileID: 5824695916157829997}
-  - component: {fileID: 8052504758295705792}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: '[Chan_1]ContentPanel'
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -268,20 +284,4 @@ MonoBehaviour:
   _closeColor: {r: 0, g: 0, b: 0, a: 1}
   _girl: {fileID: 359156743505405445, guid: e21c9accd3e5c2c46a9400b35775ee8f, type: 3}
   _icon: {fileID: 3911547358860189438}
-  _nameText: {fileID: 8052504758295705792}
---- !u!114 &8052504758295705792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3174881935834396703}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 774277ea1d9e3814eb8ba5583cdac1c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _text: 
-  _prefix: "\u041D\u044F \u044F "
-  _postfix: 
-  _mesh: {fileID: 1424263150734255370}
+  _nameText: {fileID: 4979753721674572528}
