@@ -58,7 +58,7 @@ public class GirlSwitcher : MonoBehaviour
         }
         else
         {
-            _intefaceHolder.ShowMenu(MenuType.EndMenu);
+            Restart();
         }
     }
 
@@ -66,7 +66,6 @@ public class GirlSwitcher : MonoBehaviour
     {
         _girlAcces.AddRange(_girs);
         NextGirl();
-        _intefaceHolder.ShowMenu(MenuType.HUD);
     }
 
 }

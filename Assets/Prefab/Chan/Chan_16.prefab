@@ -215,8 +215,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _id: 15
-  _loveHealth: 25
-  _cellHealth: 25
+  _loveHealth: 75
+  _cellHealth: 50
   _girlName: "\u0410\u0441\u0443\u043A\u0430"
   _dialogs:
   - "\u0422\u0435\u0431\u0435 \u043B\u0443\u0447\u0448\u0435 \u0438\u043C\u0435\u0442\u044C
