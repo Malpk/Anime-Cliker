@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instanceAudio { get; private set; }
-    
+    [SerializeField] private Slider voicesVolumeSlider;
+
     [Min(0)]
     [SerializeField] private int _delay;
 
@@ -16,11 +18,11 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip ironLock;
     [SerializeField] private AudioClip clipPicup;
 
-     private float volumeIsMusic = 1f; 
+    [SerializeField] private float _volume = 1; 
 
     private int _index = 0;
     private float _progress = 0;
-    [SerializeField] private AudioSource audioSource; 
+    [SerializeField]  private AudioSource audioSource; 
     private void Reset()
     {
         _delay = 9;
@@ -38,11 +40,13 @@ public class AudioManager : MonoBehaviour
             Destroy(this);
             return;
         }
-        _progress = _delay; 
-    } 
-    private void Update()
+        _progress = _delay;
+        audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
+    public void Update()
     {
-        audioSource.volume = volumeIsMusic;
+        _volume = voicesVolumeSlider.value;
+        audioSource.volume = _volume;
     }
     public void PlayLockIron()
     {
@@ -72,9 +76,9 @@ public class AudioManager : MonoBehaviour
         _index = Random.Range(0, _clipsGirle.Count);
         return _index;
     }
-    public void SetVolumeMusic(float volume)
+    public void SetVoisVolume(float volume)
     {
-        volumeIsMusic = volume;
+        _volume = volume;
     }
 }
  

@@ -21,26 +21,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &1466218337681942742
-RectTransform:
+--- !u!4 &1466218337681942742
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7212180544582442843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.00809424}
+  m_LocalPosition: {x: -1.0045154, y: -2.793758, z: -0.00809424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0045154, y: -2.793758}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &4226765068382027310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85,8 +80,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 641452eff687fad4684aa0496726b132, type: 3}
   - {fileID: 8300000, guid: b6a4c59cb99db5d4dae27864487f758e, type: 3}
   ironLock: {fileID: 8300000, guid: 67deb0e7bf0b94a42b9c4204ea7507dc, type: 3}
-  clipPicup: {fileID: 0}
-  volumeIsMusic: 1
+  volume: 0.5
 --- !u!114 &5405354421120434895
 MonoBehaviour:
   m_ObjectHideFlags: 0
