@@ -4,7 +4,7 @@ using UnityEngine;
 public class Yandex : MonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void ShowReclama();
+    private static extern void ShowReclama(); 
     public void ShowReclamaInUnity()
     {
 #if UNITY_EDITOR
@@ -15,5 +15,5 @@ public class Yandex : MonoBehaviour
         ShowReclama();
 #endif
 #endif
-    }
+    } 
 }

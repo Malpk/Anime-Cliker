@@ -20,6 +20,6 @@ mergeInto(LibraryManager.library, {
       }
     }
   })
- }, 
+ },  
 
 });
