@@ -9,8 +9,7 @@ public class SwichMusic : MonoBehaviour
     [SerializeField] private AudioClip[] audioArray;
     [SerializeField] private float _volumeMus = 1;
     [SerializeField] private Slider musicVolumeSlider;
-    private int index = 0;
-    private bool isPlaying = false;
+    private int index = 0; 
 
     private void Awake()
     { 
@@ -30,38 +29,17 @@ public class SwichMusic : MonoBehaviour
 
     private void PlayNextMusic()
     {
-        m_AudioSource.clip = audioArray[index];
-        m_AudioSource.Play();
-        StartCoroutine(WaitForMusicToFinish());
+        m_AudioSource.PlayOneShot(audioArray[index]);
     }
-
-    private IEnumerator WaitForMusicToFinish()
+    public void PouseMusic()
     {
-        isPlaying = true;
-
-        while (m_AudioSource.isPlaying)
-        {
-            yield return null;
-        }
-
-        isPlaying = false;
-        index++;
-        if (index >= audioArray.Length)
-            index = 0;
-        PlayNextMusic();
-    }
-
-    public void TurnOnMusic()
-    {
-        if (!isPlaying)
-            PlayNextMusic();
-    }
-
-    public void TurnOffMusic()
-    {
+        enabled = false;
         m_AudioSource.Stop();
-        StopAllCoroutines();
-        isPlaying = false;
+    }
+    public void PlayingMusic()
+    {
+        enabled = true;
+        m_AudioSource.Play();
     }
     public void SetMusicVolume(float volume)
     {
