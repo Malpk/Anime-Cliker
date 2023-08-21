@@ -14,9 +14,12 @@ public class ContentPanel : MonoBehaviour
     public int PanelId => _girl.Id;
     public bool IsOpen => _isOpen;
 
-
     private void OnValidate()
     {
+        name = "ContentPanel";
+        _nameText?.SetText(_girl.GirlName);
+        if (_girl)
+            name = $"[{_girl.name}]" + name;
         if (_icon)
             _icon.sprite = _girl.Sprite;
         _icon.color = _isOpen ? _openColor : _closeColor;
@@ -26,12 +29,14 @@ public class ContentPanel : MonoBehaviour
     {
         _isOpen = true;
         _icon.color = _openColor;
+        _nameText.gameObject.SetActive(true);
     }
 
     public void Close()
     {
         _isOpen = false;
         _icon.color = _closeColor;
+        _nameText.gameObject.SetActive(false);
     }
 
 }

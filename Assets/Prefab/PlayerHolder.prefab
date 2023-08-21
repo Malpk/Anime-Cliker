@@ -52,9 +52,10 @@ MonoBehaviour:
     \u0441\u043A\u043E\u0440\u0435\u0439!!!"
   _name: {fileID: 0}
   _loveField: {fileID: 0}
+  particleLoveObj: {fileID: 3712495074033040496}
+  _girlSound: {fileID: 0}
   _dialogWindow: {fileID: 0}
   particleLove: {fileID: 6946429102318686590}
-  particleLoveObj: {fileID: 3712495074033040496}
 --- !u!1 &1523570209369490169
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,8 +187,9 @@ MonoBehaviour:
   _nextState: {fileID: 6091610856538989303}
   _cellHealth: 20
   _girlCell: {fileID: 3533878813837259902}
-  particleLock: {fileID: 5846580614116569865}
+  _girlSound: {fileID: 0}
   particleLockObj: {fileID: 7567554103733338329}
+  particleLock: {fileID: 5846580614116569865}
 --- !u!1 &6295708986288620439
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,9 +237,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _nextState: {fileID: 141273156725002270}
   _girlNameText: {fileID: 0}
-  _interface: {fileID: 0}
-  particleFinish: {fileID: 7072724268436907248}
   particleFinishObj: {fileID: 5068698539644290091}
+  audioManager: {fileID: 0}
+  particleFinish: {fileID: 7072724268436907248}
+  _interface: {fileID: 0}
+  _girlCollectionMenu: {fileID: 0}
 --- !u!1 &6989179593370120033
 GameObject:
   m_ObjectHideFlags: 0
@@ -377,6 +381,23 @@ MonoBehaviour:
   - {fileID: 359156743505405445, guid: e21c9accd3e5c2c46a9400b35775ee8f, type: 3}
   - {fileID: 359156743505405445, guid: e9745624cabc56648abbd68725279807, type: 3}
   - {fileID: 359156743505405445, guid: ffb6371396d82ed45825d5afd6078372, type: 3}
+  - {fileID: 359156743505405445, guid: 2a4b2d3271147524bb3b16265eae7925, type: 3}
+  - {fileID: 3435299457434107964, guid: db6adb403f0cef64a897b97e993094b8, type: 3}
+  - {fileID: 991799989378295358, guid: 6d5e645294d69da4f86fd9b428713813, type: 3}
+  - {fileID: 7272786039882900607, guid: 3c36ac7630d7fbd45b03c436ec12c9f5, type: 3}
+  - {fileID: 5759361677212075534, guid: b7e4a85faefad6a46b72604e25905c30, type: 3}
+  - {fileID: 5770613148075093956, guid: 97dd189122052de4d9b39ce1d3027518, type: 3}
+  - {fileID: 1275491743873096024, guid: 354624b485b79df4db51f5ece3329154, type: 3}
+  - {fileID: 4923206121632941642, guid: 8c766feadc408804699b9ddeb44f94f0, type: 3}
+  - {fileID: 5214024122851857420, guid: bb228b5a860d48441b31ef90d2fa5f4c, type: 3}
+  - {fileID: 8485566792697507652, guid: 05317616f24ed2b469e767ec3e97648a, type: 3}
+  - {fileID: 1254292715857270772, guid: 72c8ddfb01c25f749957b2ae5953de8b, type: 3}
+  - {fileID: 3941175717209211783, guid: 67afe0c0599871e4b8df69e576b85195, type: 3}
+  - {fileID: 427003269422929555, guid: 55d9b14c4e92f534e97c2959286000af, type: 3}
+  - {fileID: 7649193311606459122, guid: 656c32b821d7d9d4c98e50441aaea529, type: 3}
+  - {fileID: 4395890567382694621, guid: 5b0e5c2823648da458d72e993b576d54, type: 3}
+  - {fileID: 6490865050265723710, guid: 6e20e04464c004043ad0877a9b93ee06, type: 3}
+  - {fileID: 3354395951414186280, guid: 2bd18e9a12dd5794998804219b15cab8, type: 3}
   _intefaceHolder: {fileID: 0}
 --- !u!95 &4105741819574037589
 Animator:

@@ -3,19 +3,21 @@ using UnityEngine;
 public class PickGirlState : GirlState
 {
     [SerializeField] private TextUI _girlNameText;
-    [SerializeField] private GirlCollectionMenu _girlCollectionMenu;
-    [SerializeField] private InterfaceSwitcher _interface;
-    [SerializeField] private ParticleSystem particleFinish;
     [SerializeField] private GameObject particleFinishObj;
+    [SerializeField] private AudioManager audioManager;
+    [SerializeField] private ParticleSystem particleFinish;
+    [SerializeField] private InterfaceSwitcher _interface;
+    [SerializeField] private GirlCollectionMenu _girlCollectionMenu;
 
     private GirlData _girl;
 
     public override GirlStateType TypeState => GirlStateType.PickState;
-
+    
     private void Start()
     {
         particleFinishObj.gameObject.SetActive(true);  
         particleFinish.Stop();
+        
     }
 
     public override StateData Save()
@@ -36,6 +38,7 @@ public class PickGirlState : GirlState
         _interface.ShowMenu(MenuType.PickMenu);
         particleFinishObj.gameObject.SetActive(true);
         particleFinish.Play();
+        audioManager.PlayPicupVois();
     }
 
     public override bool UpdateState(int click)

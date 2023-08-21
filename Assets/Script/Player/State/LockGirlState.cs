@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class LockGirlState : GirlState
 {
-    private AudioManager _girlSound;
     [Min(10)]
     [SerializeField] private int _cellHealth;
     [SerializeField] private GirlCell _girlCell;
-    [SerializeField] private ParticleSystem particleLock;
+    [SerializeField] private AudioManager _girlSound;
     [SerializeField] private GameObject particleLockObj;
+    [SerializeField] private ParticleSystem particleLock;
 
     private float _progress;
     
@@ -15,7 +15,6 @@ public class LockGirlState : GirlState
 
     private void Start()
     {
-        _girlSound = AudioManager.instanceAudio;
         particleLockObj.gameObject.SetActive(true);
         particleLock.Stop(); 
     }

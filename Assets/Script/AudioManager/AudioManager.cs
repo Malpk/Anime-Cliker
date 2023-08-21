@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instanceAudio { get; private set; }
-    
+    [SerializeField] private Slider voicesVolumeSlider;
+
     [Min(0)]
     [SerializeField] private int _delay;
 
     [SerializeField] private List<AudioClip> _clipsGirle;
-    [SerializeField] private List<AudioClip> _clipsMan; 
-
+    [SerializeField] private List<AudioClip> _clipsMan;
+    [SerializeField] private AudioClip _click;
     [SerializeField] private AudioClip ironLock;
+    [SerializeField] private AudioClip clipPicup;
 
-    [SerializeField] private float volume = 1; 
+    [SerializeField] private float _volume = 1; 
 
     private int _index = 0;
     private float _progress = 0;
-    private AudioSource audioSource; 
+    [SerializeField]  private AudioSource audioSource; 
     private void Reset()
     {
         _delay = 9;
@@ -38,12 +41,20 @@ public class AudioManager : MonoBehaviour
             return;
         }
         _progress = _delay;
-        audioSource = gameObject.AddComponent<AudioSource>();
-        audioSource.volume = volume; 
+        audioSource = gameObject.AddComponent<AudioSource>(); 
+    }
+    public void Update()
+    {
+        _volume = voicesVolumeSlider.value;
+        audioSource.volume = _volume;
     }
     public void PlayLockIron()
     {
-        audioSource.PlayOneShot(ironLock,1f);
+        audioSource.PlayOneShot(ironLock,1f); 
+    }
+    public void PlayPicupVois()
+    {
+        audioSource.PlayOneShot(clipPicup, 1f);
     }
     public void PlayVoisMan()
     { 
@@ -59,11 +70,19 @@ public class AudioManager : MonoBehaviour
             int index = GetRandomVois();
             audioSource.PlayOneShot(_clipsGirle[index]);
         }
+        else
+        {
+            audioSource.PlayOneShot(_click);
+        }
     }
     private int GetRandomVois()
     {   
         _index = Random.Range(0, _clipsGirle.Count);
         return _index;
+    }
+    public void SetVoisVolume(float volume)
+    {
+        _volume = volume;
     }
 }
  

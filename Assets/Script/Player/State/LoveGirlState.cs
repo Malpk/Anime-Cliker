@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class LoveGirlState : GirlState
 {
-    private AudioManager _girlSound;
     [Min(10)]
     [SerializeField] private int _requredLove;
     [Min(1)]
@@ -11,9 +10,10 @@ public class LoveGirlState : GirlState
     [Header("Reference")]
     [SerializeField] private TextUI _name;
     [SerializeField] private FieldUI _loveField;
+    [SerializeField] private GameObject particleLoveObj;
+    [SerializeField] private AudioManager _girlSound;
     [SerializeField] private DialogWindow _dialogWindow;
     [SerializeField] private ParticleSystem particleLove;
-    [SerializeField] private GameObject particleLoveObj;
    
     private int _delayProgress;
     private float _progress;
@@ -25,7 +25,6 @@ public class LoveGirlState : GirlState
     {
         particleLoveObj.gameObject.SetActive(true);
         particleLove.Stop();
-        _girlSound = AudioManager.instanceAudio;
     }
     private void Reset()
     {
