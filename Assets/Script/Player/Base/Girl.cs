@@ -9,7 +9,6 @@ public class Girl : MonoBehaviour
 
     public GirlData Data => _data;
 
-
     private void Awake()
     {
         foreach (var state in _states)
@@ -46,6 +45,7 @@ public class Girl : MonoBehaviour
         Destroy(_data.gameObject);
         _data = Instantiate(data.gameObject, transform.position, 
             Quaternion.identity, transform).GetComponent<GirlData>();
+        _data.name = data.name;
         SetState(_states[0]);
     }
 

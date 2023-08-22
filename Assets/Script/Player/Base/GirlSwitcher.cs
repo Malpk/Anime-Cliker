@@ -3,15 +3,26 @@ using UnityEngine;
 
 public class GirlSwitcher : MonoBehaviour
 {
+    [SerializeField] private string[] _girls;
     [Header("Reference")]
     [SerializeField] private Girl _girl;
-    [SerializeField] private GirlData[] _girs;
     [SerializeField] private InterfaceSwitcher _intefaceHolder;
 
-    private List<GirlData> _girlAcces = new List<GirlData>();
+    private List<string> _girlAcces = new List<string>();
+
+    private void OnValidate()
+    {
+        var contents = Resources.LoadAll<GirlData>("");
+        _girls = new string[contents.Length];
+        for (int i = 0; i < _girls.Length; i++)
+        {
+            _girls[i] = contents[i].name;
+        }
+    }
 
     private void Awake()
     {
+
         Restart();
     }
 
@@ -21,30 +32,18 @@ public class GirlSwitcher : MonoBehaviour
         {
             var data = JsonUtility.FromJson<ProgressData>(json);
             _girlAcces.Clear();
-            foreach (var girl in _girs)
-            {
-                if (data.LockGirl.Contains(girl.Id))
-                {
-                    _girlAcces.Add(girl);
-                }
-                else if (girl.Id == data.GirlActive)
-                {
-                    _girl.SetGirl(girl);
-                    _girl.Load(data.GirlProgress);
-                }
-            }
+            _girlAcces.AddRange(data.LockGirl);
+            LoadGirl(data.GirlActive);
+            _girl.Load(data.GirlProgress);
         }
     }
 
     public string Save()
     {
         var data = new ProgressData();
-        data.GirlActive = _girl.Data.Id;
+        data.GirlActive = _girl.Data.name;
         data.GirlProgress = _girl.Save();
-        foreach (var girl in _girlAcces)
-        {
-            data.LockGirl.Add(girl.Id);
-        }
+        data.LockGirl.AddRange(_girlAcces);
         return JsonUtility.ToJson(data);
     }
 
@@ -54,7 +53,7 @@ public class GirlSwitcher : MonoBehaviour
         {
             var girl = _girlAcces[Random.Range(0, _girlAcces.Count)];
             _girlAcces.Remove(girl);
-            _girl.SetGirl(girl);
+            LoadGirl(girl);
         }
         else
         {
@@ -64,8 +63,15 @@ public class GirlSwitcher : MonoBehaviour
 
     public void Restart()
     {
-        _girlAcces.AddRange(_girs);
+        _girlAcces.Clear();
+        _girlAcces.AddRange(_girls);
         NextGirl();
+    }
+
+    private void LoadGirl(string name)
+    {
+        var girl = Resources.Load<GirlData>("Chan/"+ name);
+        _girl.SetGirl(girl);
     }
 
 }

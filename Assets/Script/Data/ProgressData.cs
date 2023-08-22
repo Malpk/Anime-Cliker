@@ -3,7 +3,7 @@ using System.Collections.Generic;
 [System.Serializable]
 public class ProgressData
 {
-    public int GirlActive = 0;
+    public string GirlActive = "";
     public string GirlProgress = "";
-    public List<int> LockGirl = new List<int>();
+    public List<string> LockGirl = new List<string>();
 }
