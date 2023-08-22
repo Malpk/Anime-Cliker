@@ -1553,6 +1553,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4990504691566181073, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
+      propertyPath: m_Name
+      value: '[Chan_2]ContentPanel'
+      objectReference: {fileID: 0}
     - target: {fileID: 6576369160067005562, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1568,6 +1572,10 @@ PrefabInstance:
     - target: {fileID: 6576369160067005562, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -538.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6712609355491067195, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
+      propertyPath: m_Name
+      value: '[Chan_1]ContentPanel'
       objectReference: {fileID: 0}
     - target: {fileID: 7173403663427922519, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1680,6 +1688,10 @@ PrefabInstance:
     - target: {fileID: 8914857353704692028, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8975556527875653244, guid: f711f9a5791ef494fbc5c8f897446fa7, type: 3}
+      propertyPath: m_Name
+      value: '[Chan_3]ContentPanel'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
