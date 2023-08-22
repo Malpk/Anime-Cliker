@@ -950,8 +950,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c0e9f885ec773a44bf59fce699011ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _saveDelay: 2
-  _key: 1111
+  _saveDelay: 3
+  _key: 1120s
   _girlSwitcher: {fileID: 8101313108694774261}
   _collectionGirl: {fileID: 1680960308}
 --- !u!4 &367452333
@@ -998,7 +998,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b33e3a26196dbd64ba998f4d2782668b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _adsShowDelay: 3
+  _adsShowDelay: 0
 --- !u!4 &408830387
 Transform:
   m_ObjectHideFlags: 0
@@ -2919,30 +2919,6 @@ MonoBehaviour:
       - m_Target: {fileID: 948920975}
         m_TargetAssemblyTypeName: AudioManager, Assembly-CSharp
         m_MethodName: PlayVoisMan
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 367452332}
-        m_TargetAssemblyTypeName: DataSaver, Assembly-CSharp
-        m_MethodName: Save
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 408830386}
-        m_TargetAssemblyTypeName: Yandex, Assembly-CSharp
-        m_MethodName: ShowAds
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6394,14 +6370,6 @@ PrefabInstance:
     - target: {fileID: 8769815266034046551, guid: cc363e25be15a60448404ac1431d1938, type: 3}
       propertyPath: m_LocalPosition.y
       value: -2.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 8852354022199833735, guid: cc363e25be15a60448404ac1431d1938, type: 3}
-      propertyPath: _ads
-      value: 
-      objectReference: {fileID: 408830386}
-    - target: {fileID: 8852354022199833735, guid: cc363e25be15a60448404ac1431d1938, type: 3}
-      propertyPath: _adsShowDelay
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8852354022199833735, guid: cc363e25be15a60448404ac1431d1938, type: 3}
       propertyPath: _intefaceHolder
