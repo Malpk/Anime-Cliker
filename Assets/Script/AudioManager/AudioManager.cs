@@ -12,8 +12,8 @@ public class AudioManager : MonoBehaviour
     [Min(0)]
     [SerializeField] private int _delay;
 
-    [SerializeField] private List<AudioClip> _clipsGirle;
-    [SerializeField] private List<AudioClip> _clipsMan;
+    [SerializeField] private List<AudioClip> _girlVoiceClips;
+    [SerializeField] private List<AudioClip> _manVoiceClips;
     [SerializeField] private AudioClip _click;
     [SerializeField] private AudioClip ironLock;
     [SerializeField] private AudioClip clipPicup;
@@ -22,7 +22,7 @@ public class AudioManager : MonoBehaviour
 
     private int _index = 0;
     private float _progress = 0;
-    [SerializeField]  private AudioSource audioSource; 
+    [HideInInspector]public AudioSource audioSource; 
     private void Reset()
     {
         _delay = 9;
@@ -40,8 +40,11 @@ public class AudioManager : MonoBehaviour
             Destroy(this);
             return;
         }
-        _progress = _delay;
-        audioSource = gameObject.AddComponent<AudioSource>(); 
+        _progress = _delay; 
+    }
+    public void Start()
+    {
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
     public void Update()
     {
@@ -59,7 +62,7 @@ public class AudioManager : MonoBehaviour
     public void PlayVoisMan()
     { 
         int index = Random.Range(0, 2);
-        audioSource.PlayOneShot(_clipsMan[index]);
+        audioSource.PlayOneShot(_manVoiceClips[index]);
     }
     public void PlayVois()
     {
@@ -68,7 +71,7 @@ public class AudioManager : MonoBehaviour
         {
             _progress = 0f;
             int index = GetRandomVois();
-            audioSource.PlayOneShot(_clipsGirle[index]);
+            audioSource.PlayOneShot(_girlVoiceClips[index]);
         }
         else
         {
@@ -77,7 +80,7 @@ public class AudioManager : MonoBehaviour
     }
     private int GetRandomVois()
     {   
-        _index = Random.Range(0, _clipsGirle.Count);
+        _index = Random.Range(0, _girlVoiceClips.Count);
         return _index;
     }
     public void SetVoisVolume(float volume)
