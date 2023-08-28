@@ -18,11 +18,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip ironLock;
     [SerializeField] private AudioClip clipPicup;
 
-    [SerializeField] private float _volume = 1; 
+    [HideInInspector] public AudioSource audioSource;
 
+    public float _volume = 1;  
     private int _index = 0;
     private float _progress = 0;
-    [HideInInspector]public AudioSource audioSource; 
+
+    
+
     private void Reset()
     {
         _delay = 9;

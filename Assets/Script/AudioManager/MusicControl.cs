@@ -81,14 +81,14 @@ public class MusicControl : MonoBehaviour
         }
         StopAllCoroutines();
         isPlaying = false;
-        audio.audioSource.volume = 0;
+        audio._volume = 0;
     }
     public void PlayingMusic()
     {
         enabled = true;
         if (!isPlaying)
             m_AudioSource.Play();
-        audio.audioSource.volume = 0.25f;
+        audio._volume = 0.25f;
     }
     public void SetMusicVolume(float volume)
     {
