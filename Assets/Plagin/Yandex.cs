@@ -20,8 +20,8 @@ public class Yandex : MonoBehaviour
 
     private void Reset()
     {
-        _adsSteep = 3;
-        _adsDelayShow = 3;
+        _adsSteep = 2;
+        _adsDelayShow = 2;
     }
 
     public void ShowAds()
@@ -36,14 +36,19 @@ public class Yandex : MonoBehaviour
             }
         }
     }
-
+    public void PlaPlayTimeScale()
+    {
+        Time.timeScale = 1f;
+    }
     public void ShowReclamaInUnity()
     {
+        
 #if UNITY_EDITOR
         Debug.Log("showAds_editor");
 #elif UNITY_WEBGL
-        Debug.Log("webgl");
+        Debug.Log("webgl"); 
         ShowReclama();
+        Time.timeScale = 0f;
 #endif
     }
 
