@@ -36,7 +36,7 @@ public class Yandex : MonoBehaviour
             }
         }
     }
-    public void PlaPlayTimeScale()
+    public void PlayTimeScale()
     {
         Time.timeScale = 1f;
     }
