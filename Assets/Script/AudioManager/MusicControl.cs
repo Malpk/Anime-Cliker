@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MusicControl : MonoBehaviour
 {
-    private AudioManager audio;
+    private AudioManager audioManager;
     [SerializeField] private AudioClip[] audioArray;
     [SerializeField] private float _volumeMus = 1;
     [SerializeField] private Slider musicVolumeSlider;
@@ -24,7 +24,7 @@ public class MusicControl : MonoBehaviour
 
     private IEnumerator Start() 
     {
-        audio = AudioManager.instanceAudio;
+        audioManager = AudioManager.instanceAudio;
         if (!isPlaying)
             PlayNextMusic();
         yield return null;
@@ -81,14 +81,15 @@ public class MusicControl : MonoBehaviour
         }
         StopAllCoroutines();
         isPlaying = false;
-        audio._volume = 0;
+        audioManager._volume = 0;
     }
     public void PlayingMusic()
-    {
+    {   
         enabled = true;
+        Time.timeScale = 1;
         if (!isPlaying)
             m_AudioSource.Play();
-        audio._volume = 0.25f;
+        audioManager._volume = 0.25f; 
     }
     public void SetMusicVolume(float volume)
     {

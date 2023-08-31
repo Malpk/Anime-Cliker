@@ -10,7 +10,7 @@ public class Yandex : MonoBehaviour
     [SerializeField] private int _adsDelayShow;
     [Header("Reference")]
     [SerializeField] private TextUI _text;
-
+    [SerializeField] private MusicControl musicControl;
     private float _progress = 0;
 
     private Coroutine _ads;
@@ -35,19 +35,17 @@ public class Yandex : MonoBehaviour
                 _ads = StartCoroutine(ShowWaitAds(_adsDelayShow));
             }
         }
-    }
-    public void PlayTimeScale()
-    {
-        Time.timeScale = 1f;
-    }
+    } 
     public void ShowReclamaInUnity()
     {
-        
+       
+
 #if UNITY_EDITOR
         Debug.Log("showAds_editor");
 #elif UNITY_WEBGL
         Debug.Log("webgl"); 
-        ShowReclama();
+        musicControl.PouseMusic();
+        ShowReclama(); 
         Time.timeScale = 0f;
 #endif
     }

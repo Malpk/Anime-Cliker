@@ -4,7 +4,7 @@ mergeInto(LibraryManager.library, {
    ysdk.adv.showFullscreenAdv({
     callbacks: {
         onClose: function(wasShown) {
-         MyGameInstance.SendMessage('Yandex', 'PlayTimeScale');
+         MyGameInstance.SendMessage('AudioManager', 'PlayingMusic');
         },
         onError: function(error) {
           // some action on error
