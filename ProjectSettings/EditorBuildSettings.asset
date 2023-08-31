@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: cad8e2f378626694bb33632516f77324
+  - enabled: 1
+    path: Assets/Scenes/Malpk.unity
+    guid: cb155549b68d3c44985ed657a05eb77f
   m_configObjects: {}
